@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTS | JKUAT HUB CLUB</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>JKUAT HUB CLUB</h1>
+            <ul>
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="clubs.html">CLUBS</a></li>
+                <li><a href="contacts.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacts">
+            <h2>Contact Us</h2>
+            <p>Have any suggestions, feedback or want to join a club?<br> Fill in the forms below!</p>
+            <img src="download.jpeg" alt="Contact Us" class="banner-img">
+        </section>
+
+        <section id="join-club">
+            <h3>Join a Club!</h3>
+            <form action="#" method="post">
+                <label for="join-name">Full Name:</label>
+                <input type="text" id="join-name" name="join-name" required>
+
+                <label for="join-email">Email Address:</label>
+                <input type="email" id="join-email" name="join-email" required>
+
+                <label for="join-club">Select a Club:</label>
+                <select id="join-club" name="join-club" required>
+                    <option value="">--Select a Club--</option>
+                    <option value="chess">Chess Club</option>
+                    <option value="linux">Linux Club</option>
+                    <option value="JHUB">JHUB</option>
+                    <option value="WEB3">WEB3</option>
+                    <option value="red-cross">JKUAT RED CROSS CHAPTER</option>
+                </select>
+
+                <button type="submit">Join </button>
+            </form>
+        </section>
+
+        <section id="suggestions">
+            <h3>Send a Suggestion</h3>
+            <form action="#" method="post">
+                <label for="suggest-name">Your Name:</label>
+                <input type="text" id="suggest-name" name="suggest-name" required>
+
+                <label for="suggestion">Suggestion:</label>
+                <textarea id="suggestion" name="suggestion" rows="5" required></textarea>
+
+                <button type="submit">Send Suggestion</button>
+            </form>
+        </section>
+
+        <section id="feedback">
+            <h3>Provide Feedback</h3>
+            <form action="get" method="post">
+                <label for="feedback-name">Your Name:</label>
+                <input type="text" id="feedback-name" name="feedback-name" required>
+
+                <label for="feedback-message">Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" rows="5" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+         <h3>DigiTechnology</h3>
+                    <p>📍 Nairobi, Kenya / Goma, D.R. Congo</p>
+                    <p>📞 +254 742 432 583</p>
+                    <p>📞 +1 (800) 765-4321</p>
+                    <p>📞 +1 (800) 246-8100</p>
+                    <p>✉️ contact@digitechnology.com</p>
+                    <p>✉️ support@digitechnology.com</p>
+                    <p>✉️ info@digitechnology.com</p>
+        <p>&copy; 2025 JKUAT HUB CLUB. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
