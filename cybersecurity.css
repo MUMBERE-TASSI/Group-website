@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+header {
+    background-color: #161b22;
+    padding: 15px 0;
+    border-bottom: 2px solid #238636;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #238636;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6edf3;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #238636;
+}
+
+.club-section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(35, 134, 54, 0.3);
+}
+
+.club-section h2 {
+    color: #238636;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #7ee787;
+}
+
+.club-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.club-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 3px solid #238636;
+}
+
+.club-details h3 {
+    color: #7ee787;
+    margin-top: 20px;
+}
+
+.club-details ul {
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #161b22;
+    border-top: 2px solid #238636;
+    margin-top: 20px;
+}

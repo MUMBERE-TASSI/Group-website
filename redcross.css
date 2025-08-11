@@ -1,0 +1,107 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg: #fef5f5;
+  --card: #ffffff;
+  --accent: #c82333; /* Red Cross color */
+  --muted: #444;
+  --maxw: 1100px;
+  --radius: 12px;
+  --gap: 18px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container */
+.container{
+  width: calc(100% - 40px);
+  max-width: var(--maxw);
+  margin: 20px auto;
+}
+
+/* Header */
+.site-header{
+  background: var(--accent);
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-header h1{ font-size: 1.3rem; }
+.main-nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.main-nav a:hover{ background: rgba(255,255,255,0.2); }
+
+/* Hero */
+.hero{
+  border-left: 4px solid var(--accent);
+  background: rgba(200,35,51,0.05);
+}
+
+/* Cards */
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: var(--gap) 0;
+  box-shadow: var(--shadow);
+}
+.card:hover{ transform: translateY(-3px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
+
+h2, h3{ color: var(--accent); margin-bottom: 10px; }
+p{ margin-bottom: 10px; }
+
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+.features li{
+  background: rgba(200,35,51,0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Lists */
+ul, ol{ margin-left: 20px; margin-top: 8px; }
+a{ color: var(--accent); }
+
+/* Footer */
+.site-footer{
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .header-inner{ flex-direction: column; align-items: flex-start; }
+  .main-nav{ margin-top: 10px; }
+}

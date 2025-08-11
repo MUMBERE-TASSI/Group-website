@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Linux — Complete Guide</title>
+  <link rel="stylesheet" href="linux.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Linux — Complete Guide</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="homepage.html">HOME PAGE</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="clubs.html">CLUBS</a>
+        <a href="contacts.html">CONTACT</a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="card hero">
+      <h2>What is Linux?</h2>
+      <p>
+        <strong>Linux</strong> is an open-source family of Unix-like operating systems based on the
+        Linux kernel. It is widely used for servers, desktops, embedded devices, and mobile devices.
+        Linux is developed collaboratively and distributed under the GNU General Public License (GPL).
+      </p>
+    </section>
+
+    <section id="overview" class="card">
+      <h3>Overview</h3>
+      <p>
+        Linux is both a kernel (core of the OS) and a platform ecosystem (kernel + utilities + applications).
+        The typical Linux-based OS is often called a "distribution" (or distro) — e.g., Ubuntu, Fedora, Debian.
+      </p>
+      <ul class="features">
+        <li><strong>Open-source:</strong> Source code is available for inspection and modification.</li>
+        <li><strong>Stable & secure:</strong> Used by many servers and cloud providers.</li>
+        <li><strong>Flexible:</strong> Runs on many CPU architectures and devices.</li>
+        <li><strong>Customizable:</strong> Users can compose a system from packages they choose.</li>
+      </ul>
+    </section>
+
+    <section id="history" class="card">
+      <h3>History (short)</h3>
+      <p>
+        Linux began in 1991 when Linus Torvalds released the initial Linux kernel. GNU tools and utilities,
+        created by the Free Software Foundation, combined with the kernel to form fully functioning systems.
+        The collaborative open-source model produced a rich ecosystem of distributions and projects.
+      </p>
+    </section>
+
+    <section id="kernel" class="card">
+      <h3>The Linux Kernel</h3>
+      <p>
+        The kernel handles hardware, memory, processes, drivers, networking and system calls. It is monolithic
+        (but modular) — many drivers and modules can be loaded/unloaded at runtime.
+      </p>
+      <dl class="kernel-list">
+        <dt>Processes & Scheduling</dt>
+        <dd>Preemptive multitasking, scheduling policies (CFS), namespaces and cgroups for isolation.</dd>
+        <dt>Memory Management</dt>
+        <dd>Virtual memory, page cache, swap, and kernel memory allocators.</dd>
+        <dt>Device Drivers</dt>
+        <dd>Support for block, character, network devices, USB, GPUs, etc.</dd>
+      </dl>
+    </section>
+
+    <section id="distros" class="card">
+      <h3>Popular Distributions</h3>
+      <p>Different distros target different users and use-cases:</p>
+      <ul>
+        <li><strong>Ubuntu:</strong> User-friendly desktop/server, great community and tutorials.</li>
+        <li><strong>Debian:</strong> Stable and conservative; basis for many distros (including Ubuntu).</li>
+        <li><strong>Fedora:</strong> Cutting-edge features, upstream-focused (Red Hat sponsored).</li>
+        <li><strong>CentOS / Rocky / AlmaLinux:</strong> Enterprise-focused (binary-compatible with RHEL variants).</li>
+        <li><strong>Arch Linux:</strong> Minimal, rolling-release, great for learning and customization.</li>
+        <li><strong>openSUSE:</strong> Tumbleweed (rolling) & Leap (stable); YaST config tool.</li>
+      </ul>
+    </section>
+
+    <section id="commands" class="card">
+      <h3>Essential Linux Commands</h3>
+      <p>Copy/paste these in a terminal to try them (don't run unknown commands as root):</p>
+
+      <div class="cmd-block">
+        <pre><code># show current directory
+pwd
+
+# list files (long form, human readable)
+ls -lah
+
+# change directory
+cd /path/to/folder
+
+# view file content
+cat file.txt
+less file.txt
+
+# copy / move / remove
+cp source dest
+mv source dest
+rm file.txt
+
+# check running processes
+ps aux | less
+top
+htop   # if installed
+
+# system info
+uname -a
+lsblk
+df -h
+free -h
+
+# package manager examples
+sudo apt update && sudo apt upgrade   # Debian/Ubuntu
+sudo dnf update                       # Fedora
+sudo pacman -Syu                      # Arch
+        </code></pre>
+      </div>
+    </section>
+
+    <section id="filesystem" class="card">
+      <h3>Filesystem Layout (common)</h3>
+      <p>Important directories you should know:</p>
+      <table class="fs-table">
+        <thead>
+          <tr><th>Path</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>/</td><td>Root of the filesystem</td></tr>
+          <tr><td>/bin</td><td>Essential user binaries</td></tr>
+          <tr><td>/sbin</td><td>System binaries (admin tasks)</td></tr>
+          <tr><td>/etc</td><td>System configuration files</td></tr>
+          <tr><td>/home</td><td>User home directories</td></tr>
+          <tr><td>/var</td><td>Variable data — logs, mail, spool</td></tr>
+          <tr><td>/usr</td><td>Read-only user programs & libraries</td></tr>
+          <tr><td>/opt</td><td>Optional add-on software</td></tr>
+          <tr><td>/boot</td><td>Bootloader and kernel images</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pkgman" class="card">
+      <h3>Package Managers & Software</h3>
+      <p>Each distro ecosystem has its preferred package manager:</p>
+      <ul>
+        <li><strong>APT</strong> — Debian/Ubuntu: <code>apt install package</code></li>
+        <li><strong>DNF / YUM</strong> — Fedora/RHEL/CentOS: <code>dnf install package</code></li>
+        <li><strong>PACMAN</strong> — Arch: <code>pacman -S package</code></li>
+        <li><strong>Zypper</strong> — openSUSE: <code>zypper install package</code></li>
+        <li><strong>Flatpak / Snap / AppImage</strong> — distro-agnostic packaging options for desktop apps</li>
+      </ul>
+    </section>
+
+    <section id="tips" class="card">
+      <h3>Tips for Learning & Using Linux</h3>
+      <ol>
+        <li>Use a virtual machine (VirtualBox) or a live USB to try distros safely.</li>
+        <li>Learn the shell (bash, zsh) and practice common commands daily.</li>
+        <li>Read logs in <code>/var/log</code> when troubleshooting.</li>
+        <li>Use version control (git) for your configs (dotfiles).</li>
+        <li>Back up before making big system changes.</li>
+        <li>Search documentation: <code>man command</code> and online distro docs.</li>
+      </ol>
+    </section>
+
+    <section id="resources" class="card">
+      <h3>Further Resources</h3>
+      <p>Start here to go deeper:</p>
+      <ul>
+        <li>Official distro docs (Ubuntu, Debian, Fedora, ArchWiki)</li>
+        <li>Linux From Scratch — learn internals by building a system</li>
+        <li>Stack Overflow & Ask Ubuntu for Q&A</li>
+        <li>The Linux Command Line (book) and many free online tutorials</li>
+      </ul>
+    </section>
+
+    <section class="card feedback">
+      <h3>Try it!</h3>
+      <p>Open a terminal and try these quick commands:</p>
+      <pre><code>whoami
+uptime
+ls -lah ~
+</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Linux Guide • Built for learning</p>
+    </div>
+  </footer>
+
+  <script>
+    // set year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Reset & Variables */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root{
+  --bg: #0d1117;
+  --card: #161b22;
+  --accent: #00ffcc;
+  --muted: #8b949e;
+  --maxw: 1100px;
+  --radius: 12px;
+  --gap: 18px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+/* Container */
+.container{
+  width: calc(100% - 40px);
+  max-width: var(--maxw);
+  margin: 20px auto;
+}
+
+/* Header */
+.site-header{
+  background: #0c1e1b;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--accent);
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-header h1{ color: var(--accent); font-size: 1.3rem; }
+.main-nav a{
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 12px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover{
+  background: var(--accent);
+  color: #0d1117;
+}
+
+/* Hero */
+.hero{
+  border-left: 4px solid var(--accent);
+  background: rgba(0,255,204,0.05);
+}
+
+/* Cards */
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: var(--gap) 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+}
+
+h2, h3{ color: var(--accent); margin-bottom: 10px; }
+p{ margin-bottom: 10px; color: var(--muted); }
+
+/* Features */
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+.features li{
+  background: rgba(0,255,204,0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Lists */
+ul, ol{ margin-left: 20px; margin-top: 8px; }
+a{ color: var(--accent); }
+
+/* Footer */
+.site-footer{
+  background: #0c1e1b;
+  color: var(--accent);
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+  border-top: 2px solid var(--accent);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .header-inner{ flex-direction: column; align-items: flex-start; }
+  .main-nav{ margin-top: 10px; }
+}
